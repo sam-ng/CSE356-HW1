@@ -1,0 +1,13 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/samung.cse356.compas.cs.stonybrook.edu/html;
+        index hw0.html hw0.htm;
+
+        server_name samung.cse356.compas.cs.stonybrook.edu www.samung.cse356.compas.cs.stonybrook.edu;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
